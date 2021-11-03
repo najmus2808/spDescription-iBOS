@@ -53,7 +53,7 @@ export const getDocumentDetails = async (setter, id) => {
 };
 
 export function removeTags(str) {
-  if (str === null || str === "") return false;
+  if (!str) return false;
   else str = str.toString();
   let result = str.replace(/(<([^>]+)>)/gi, "");
   if (result.length < 235) {
